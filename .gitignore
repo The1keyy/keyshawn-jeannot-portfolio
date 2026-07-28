@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+*.log
+.vscode/*
+!.vscode/settings.json
+
+# Local env / secrets (none expected for this static site)
+.env
+.env.*
+
+# Optional personal media not used by the portfolio
+assets/originals/
+assets/photos/
+assets/videos/

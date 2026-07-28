@@ -1,0 +1,266 @@
+[
+  {
+    "id": "tenable-windows-vulnerability-assessment",
+    "title": "Tenable Windows Vulnerability Assessment",
+    "featured": true,
+    "category": "Vulnerability Management",
+    "summary": "Windows endpoint vulnerability assessment using Tenable Vulnerability Management—scanning systems, analyzing findings, prioritizing remediation, and documenting the workflow with sensitive details redacted.",
+    "objective": "Identify security weaknesses on Windows endpoints, analyze risk with CVSS and vendor guidance, prioritize remediation, and validate fixes through follow-up review.",
+    "workedOn": [
+      "Organized managed Windows endpoints for assessment using generalized tagging practices",
+      "Ran authenticated vulnerability scans and reviewed discovered findings",
+      "Researched associated CVEs and vendor advisories",
+      "Prioritized vulnerabilities by severity, exploitability, and practical impact",
+      "Recommended remediation actions and verified mitigation through follow-up assessment",
+      "Published sanitized documentation with hostnames, IPs, and internal details removed"
+    ],
+    "tools": [
+      "Tenable Vulnerability Management",
+      "Windows",
+      "Microsoft Defender",
+      "CVE Database",
+      "CVSS"
+    ],
+    "skills": [
+      "Vulnerability Management",
+      "CVE Research",
+      "Risk Prioritization",
+      "Endpoint Security",
+      "Security Documentation"
+    ],
+    "repoUrl": "https://github.com/The1keyy/tenable-windows-vulnerability-assessment",
+    "liveUrl": null,
+    "screenshot": null,
+    "details": {
+      "overview": "A documented vulnerability-management project focused on assessing Windows systems with Tenable Vulnerability Management. The work covers scanning, finding analysis, remediation planning, and validation—presented without exposing real organizational infrastructure.",
+      "businessProblem": "Windows endpoints accumulate missing patches and configuration weaknesses over time. Without structured scanning and prioritization, high-risk issues can linger while lower-risk noise consumes attention.",
+      "environment": "Managed Windows endpoints assessed through Tenable Vulnerability Management. Specific hostnames, IP addresses, scan configurations, asset identifiers, and account details are intentionally redacted in the public repository.",
+      "responsibilities": [
+        "Identify and organize Windows assets for assessment",
+        "Execute and review authenticated vulnerability scans",
+        "Analyze findings using CVSS scores and vendor advisories",
+        "Recommend practical remediation and confirm mitigation"
+      ],
+      "process": [
+        "Identified managed Windows endpoints for assessment",
+        "Organized assets using generalized tagging practices",
+        "Ran vulnerability scans using an authenticated assessment approach",
+        "Reviewed and validated discovered findings",
+        "Researched associated CVEs and vendor guidance",
+        "Prioritized vulnerabilities based on risk",
+        "Recommended remediation actions",
+        "Verified mitigation through follow-up review"
+      ],
+      "results": "Built a clear, recruiter-friendly record of vulnerability management practice—including sample analyses (for example, Microsoft Edge and WinVerifyTrust findings)—while keeping all sensitive operational data out of the public write-up."
+    }
+  },
+  {
+    "id": "infoblox-nios-enterprise-ddi-lab",
+    "title": "Infoblox NIOS Enterprise DDI Lab",
+    "featured": true,
+    "category": "Enterprise Networking & Security",
+    "summary": "Hands-on lab documenting enterprise DNS, DHCP, and IPAM administration with Infoblox NIOS 9.0—covering Grid architecture, service validation, troubleshooting, and technical documentation.",
+    "objective": "Understand how enterprise organizations centrally manage DNS, DHCP, and IP address allocation, and produce clear documentation of discovery, validation, and troubleshooting work.",
+    "workedOn": [
+      "Explored and documented a simulated Infoblox Grid across multiple network locations",
+      "Studied Grid architecture spanning primary/secondary datacenters and a branch office",
+      "Validated DNS resolution, DHCP assignment, and IPAM utilization",
+      "Tested client connectivity on Windows and Linux systems",
+      "Documented troubleshooting methodology and lessons learned"
+    ],
+    "tools": [
+      "Infoblox NIOS 9.0",
+      "DNS",
+      "DHCP",
+      "IPAM",
+      "Linux",
+      "Windows",
+      "VyOS"
+    ],
+    "skills": [
+      "Enterprise DNS/DHCP",
+      "IP Address Management",
+      "Grid Architecture",
+      "Network Validation",
+      "Infrastructure Documentation"
+    ],
+    "repoUrl": "https://github.com/The1keyy/infoblox-nios-enterprise-ddi-lab",
+    "liveUrl": null,
+    "screenshot": null,
+    "details": {
+      "overview": "A structured lab that explores administration, validation, and troubleshooting of a simulated enterprise DDI environment using Infoblox NIOS 9.0. Documentation covers environment discovery through lessons learned.",
+      "businessProblem": "Growing organizations need centralized DNS, DHCP, and IP address management across multiple sites. Without clear Grid understanding and validation practices, network services become harder to operate and troubleshoot.",
+      "environment": "Simulated enterprise network with multiple Infoblox Grid appliances, primary and secondary datacenters, a branch office, routing infrastructure, reporting services, and Windows/Linux clients.",
+      "responsibilities": [
+        "Explore the existing Infoblox Grid and document infrastructure",
+        "Understand Grid architecture and IP address information",
+        "Validate DNS and DHCP services and client connectivity",
+        "Troubleshoot network service issues and produce technical documentation"
+      ],
+      "process": [
+        "Repository and documentation setup",
+        "Environment discovery",
+        "Grid architecture review",
+        "IPAM, DNS, and DHCP administration",
+        "Client validation and troubleshooting",
+        "Lessons learned and final documentation"
+      ],
+      "results": "Produced a recruiter-friendly documentation set covering DDI concepts, Grid architecture, validation steps, and troubleshooting methodology for an enterprise Infoblox NIOS environment."
+    }
+  },
+  {
+    "id": "queryshield",
+    "title": "QueryShield",
+    "featured": true,
+    "category": "Application Security",
+    "summary": "Full-stack service that analyzes SQL query strings for injection indicators, assigns risk scores and severity levels, and surfaces results through authenticated API endpoints and a React dashboard.",
+    "objective": "Provide a pre-execution inspection layer that reviews SQL queries for suspicious constructs, scores risk, and stores analysis history for authenticated users.",
+    "workedOn": [
+      "Built a FastAPI backend with JWT authentication and protected analysis endpoints",
+      "Implemented pattern detection for injection indicators such as always-true conditions, comment truncation, and UNION-based attacks",
+      "Assigned weighted risk scores and severity classifications (low through critical)",
+      "Persisted analysis results in PostgreSQL tied to authenticated users",
+      "Created a React dashboard for live analysis, history, and high-risk filtering",
+      "Containerized the stack with Docker Compose and deployed to AWS EC2"
+    ],
+    "tools": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "JWT",
+      "React",
+      "TypeScript",
+      "Docker",
+      "AWS EC2"
+    ],
+    "skills": [
+      "API Security Design",
+      "SQL Injection Awareness",
+      "Backend Engineering",
+      "Auth & Persistence",
+      "Containerized Deployment"
+    ],
+    "repoUrl": "https://github.com/The1keyy/queryshield",
+    "liveUrl": null,
+    "screenshot": null,
+    "details": {
+      "overview": "QueryShield is a SQL injection risk analysis API with a React web UI. It inspects query strings before execution, detects suspicious patterns, calculates a risk score, and returns a structured security report.",
+      "businessProblem": "SQL injection remains a common web application risk. Teams need a practical way to inspect query strings, score risk, and review historical high-risk examples without waiting for production exploitation.",
+      "environment": "Python/FastAPI backend, PostgreSQL with SQLAlchemy, JWT auth, React + TypeScript frontend, Docker Compose locally, and deployment on AWS EC2.",
+      "responsibilities": [
+        "Design and implement the risk analysis engine and API routes",
+        "Add registration/login with JWT-protected endpoints",
+        "Build dashboard flows for analysis, history, and high-risk views",
+        "Package and deploy the service with Docker on AWS EC2"
+      ],
+      "process": [
+        "Receive an authenticated analysis request",
+        "Run pattern detection against the query string",
+        "Calculate risk score and severity classification",
+        "Store the result in PostgreSQL",
+        "Return a structured JSON report to the client or dashboard"
+      ],
+      "results": "Delivered an end-to-end defensive security service demonstrating backend API design, secure authentication, database persistence, containerization, and cloud deployment applied to SQL injection risk analysis."
+    }
+  },
+  {
+    "id": "readscope",
+    "title": "ReadScope",
+    "featured": false,
+    "category": "Backend / Analytics",
+    "summary": "Backend-driven reading analytics platform that compares an expected passage to a spoken transcript, then returns accuracy, fluency heuristics, and detailed error feedback with authenticated session history.",
+    "objective": "Evaluate reading performance by tokenizing expected and spoken text, identifying matches and mismatches, and returning scored analysis tied to user accounts.",
+    "workedOn": [
+      "Built FastAPI routes for authentication, reading sessions, and analysis",
+      "Implemented JWT auth with bcrypt password hashing and user-scoped data access",
+      "Created an analysis service that normalizes text, counts word frequencies, and scores accuracy/fluency",
+      "Modeled users, sessions, and analysis results with PostgreSQL and SQLAlchemy",
+      "Scaffolded a React + Vite frontend for future UI work"
+    ],
+    "tools": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "JWT",
+      "Pydantic",
+      "React",
+      "Vite"
+    ],
+    "skills": [
+      "API Design",
+      "Auth & Authorization",
+      "Data Modeling",
+      "Text Analysis",
+      "Technical Documentation"
+    ],
+    "repoUrl": "https://github.com/The1keyy/readscope",
+    "liveUrl": null,
+    "screenshot": null,
+    "details": {
+      "overview": "ReadScope compares what a user was supposed to read with what they actually said. It returns scored analysis and feedback, with full session history for authenticated users.",
+      "businessProblem": "Reading practice needs measurable feedback. Comparing expected text to a transcript gives concrete accuracy and fluency signals instead of informal review alone.",
+      "environment": "Python 3.10+, FastAPI, PostgreSQL, JWT authentication, Pydantic validation, Uvicorn. React + Vite frontend is scaffolded.",
+      "responsibilities": [
+        "Implement auth, session, and analysis API endpoints",
+        "Build the text comparison and scoring service",
+        "Keep session and analysis data scoped to the authenticated user"
+      ],
+      "process": [
+        "Create an authenticated reading session with source and transcript text",
+        "Normalize and tokenize both texts",
+        "Identify matched, missing, and extra words",
+        "Calculate accuracy and fluency scores and store the analysis result"
+      ],
+      "results": "Shipped a working backend analysis pipeline with authenticated session history. Comprehension scoring and audio transcription remain on the project roadmap."
+    }
+  },
+  {
+    "id": "courtside-coach-ai",
+    "title": "Courtside Coach AI",
+    "featured": false,
+    "category": "Multimodal AI",
+    "summary": "Hackathon project that sends a basketball court diagram and play-by-play transcript to a multimodal Llama 4 model to identify momentum-shifting plays, with a Flask API and React frontend.",
+    "objective": "Ingest a court diagram image and play-by-play text, then use Llama 4 Scout to locate and explain the most momentum-shifting three-pointer in the selected quarter or full game.",
+    "workedOn": [
+      "Wrote a Python analysis script that encodes a court diagram and pairs it with play-by-play text for Llama 4 Scout",
+      "Built a Flask API endpoint that accepts court image data, transcript text, and quarter selection",
+      "Filtered transcripts by quarter before sending them to the model",
+      "Created a React frontend for interacting with the analysis API"
+    ],
+    "tools": [
+      "Python",
+      "Flask",
+      "Llama 4 Scout",
+      "OpenAI-compatible API",
+      "React",
+      "Axios"
+    ],
+    "skills": [
+      "Multimodal Prompting",
+      "API Integration",
+      "Frontend/Backend Wiring",
+      "Hackathon Prototyping"
+    ],
+    "repoUrl": "https://github.com/The1keyy/courtside-coach-ai",
+    "liveUrl": "https://the1keyy.github.io/courtside-coach-ai/",
+    "screenshot": null,
+    "details": {
+      "overview": "Courtside Coach AI is a multimodal Llama 4 hackathon project. It combines a court diagram with basketball play-by-play text and asks the model to identify where the most momentum-shifting three-pointer occurred and why it mattered.",
+      "businessProblem": "Game film and play-by-play logs are dense. A prototype multimodal workflow can highlight key momentum moments faster than manual review alone.",
+      "environment": "Python analysis scripts and Flask backend calling an OpenAI-compatible Llama API; React frontend deployed via GitHub Pages.",
+      "responsibilities": [
+        "Prepare multimodal inputs (Base64 court image + transcript)",
+        "Expose an /analyze API with quarter filtering",
+        "Connect a React UI to the analysis backend"
+      ],
+      "process": [
+        "Load or upload a court diagram and play-by-play transcript",
+        "Optionally filter the transcript to a selected quarter",
+        "Send image and text to Llama-4-Scout through the compatibility API",
+        "Return a structured explanation of the momentum-shifting play"
+      ],
+      "results": "Produced a working multimodal prototype that demonstrates prompt design, API integration, and full-stack wiring around Llama 4. This project shows applied AI engineering interest; AI/LLM security remains a separate career focus area."
+    }
+  }
+]
