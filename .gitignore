@@ -12,3 +12,6 @@ Thumbs.db
 assets/originals/
 assets/photos/
 assets/videos/
+
+# External design reference (do not commit)
+reference-portfolio/
