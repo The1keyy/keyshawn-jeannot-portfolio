@@ -62,3 +62,14 @@ Do not publish real university usernames, emails, IPs, hostnames, tickets, crede
 ## Design notes
 
 Inspired by the professionalism and clarity of mature technical sites—not copied from any specific template. Restrained dark theme, IBM Plex typography, teal accent, and recruiter-friendly scanning hierarchy.
+
+
+## Design reference
+
+Local clone of the visual/structure reference (ignored by git):
+
+```bash
+reference-portfolio/
+```
+
+Do not copy its branding or assets. Use it only for layout and professionalism cues.
