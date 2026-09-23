@@ -31,14 +31,14 @@ A local server is required so `data/projects.json` can load via `fetch`.
 | Projects | Cards + detail modal from JSON |
 | Skills | Grouped tags (no percentage bars) |
 | Leadership | NSBE President |
-| Education | UMass Boston + Security+ in progress |
+| Education | UMass Boston, CompTIA Security+ (earned), AWS Solutions Architect – Associate and Terraform Associate (in progress) |
 | Contact | Email placeholder, GitHub, LinkedIn |
 
 ## What you still need to provide
 
 1. **Professional email** — replace `YOUR_EMAIL@example.com` in `index.html`
 2. **Profile photo** — add `assets/images/profile.jpg`, then update the `src` on `#profile-photo` in `index.html`
-3. **Résumé PDF** — add `assets/resume/Keyshawn-Jeannot-Resume.pdf`
+3. **Résumé PDF** — `assets/resume/Keyshawn_Jeannot_Resume.pdf`
 4. **Project screenshots** (optional, sanitized) — set `"screenshot": "assets/images/..."` in `data/projects.json`
 5. **Open Graph image** (optional) — replace `assets/images/og-placeholder.svg` or point `og:image` to a PNG/JPG
 

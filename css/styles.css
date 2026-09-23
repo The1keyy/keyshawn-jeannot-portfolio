@@ -421,6 +421,11 @@ code {
   font-size: 12px;
   font-weight: 600;
 }
+.badge--earned {
+  border-color: rgba(110, 184, 138, 0.45);
+  background: rgba(110, 184, 138, 0.12);
+  color: #8fd4a8;
+}
 
 /* ===== Projects ===== */
 .project-grid {
