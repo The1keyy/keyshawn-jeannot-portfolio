@@ -31,7 +31,7 @@ A local server is required so `data/projects.json` can load via `fetch`.
 | Projects | Cards + detail modal from JSON |
 | Skills | Grouped tags (no percentage bars) |
 | Leadership | NSBE President |
-| Education | UMass Boston, CompTIA Security+ (earned), AWS Solutions Architect – Associate and Terraform Associate (in progress) |
+| Education | UMass Boston, CompTIA Security+ (earned), AWS Solutions Architect – Associate (expected October 2026), Terraform Associate (in progress) |
 | Contact | Email placeholder, GitHub, LinkedIn |
 
 ## What you still need to provide
