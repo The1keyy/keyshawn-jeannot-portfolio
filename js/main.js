@@ -106,28 +106,31 @@
       card.id = `project-${project.id}`;
 
       const media = project.screenshot
-        ? `<img src="${escapeAttr(project.screenshot)}" alt="Screenshot of ${escapeAttr(project.title)}" loading="lazy" decoding="async">`
-        : `<div class="project-card__placeholder">Screenshot placeholder — add a sanitized image path in data/projects.json</div>`;
+        ? `<img class="project-card__shot" src="${escapeAttr(project.screenshot)}" alt="Screenshot of ${escapeAttr(project.title)}" loading="lazy" decoding="async">`
+        : "";
 
       card.innerHTML = `
         ${media}
-        <p class="project-card__category">${escapeHtml(project.category)}</p>
-        <h3>${escapeHtml(project.title)}</h3>
-        <p>${escapeHtml(project.summary)}</p>
-        <p class="project-card__meta"><strong>Objective:</strong> ${escapeHtml(project.objective)}</p>
-        <ul class="project-card__tags" aria-label="Tools">
-          ${project.tools
-            .slice(0, 6)
-            .map((tool) => `<li>${escapeHtml(tool)}</li>`)
-            .join("")}
-        </ul>
-        <div class="project-card__actions"></div>
+        <div class="project-card__header">
+          <p class="project-card__category">${escapeHtml(project.category)}</p>
+          <h3>${escapeHtml(project.title)}</h3>
+        </div>
+        <div class="project-card__body">
+          <p>${escapeHtml(project.summary)}</p>
+          <ul class="tags" aria-label="Tools">
+            ${project.tools
+              .slice(0, 5)
+              .map((tool) => `<li>${escapeHtml(tool)}</li>`)
+              .join("")}
+          </ul>
+          <div class="project-card__actions"></div>
+        </div>
       `;
 
       const actions = card.querySelector(".project-card__actions");
 
       const repo = document.createElement("a");
-      repo.className = "btn btn--small btn--alt";
+      repo.className = "btn btn--small btn--secondary";
       repo.href = project.repoUrl;
       repo.target = "_blank";
       repo.rel = "noopener noreferrer";
@@ -137,7 +140,7 @@
       if (project.details) {
         const details = document.createElement("button");
         details.type = "button";
-        details.className = "btn btn--small btn--brand";
+        details.className = "btn btn--small btn--primary";
         details.textContent = "Details";
         details.setAttribute("data-project-id", project.id);
         details.setAttribute("aria-haspopup", "dialog");
@@ -146,7 +149,7 @@
 
       if (project.liveUrl) {
         const live = document.createElement("a");
-        live.className = "btn btn--small btn--alt";
+        live.className = "btn btn--small btn--secondary";
         live.href = project.liveUrl;
         live.target = "_blank";
         live.rel = "noopener noreferrer";
@@ -221,9 +224,9 @@
       <section class="modal-section"><h3>Results / lessons learned</h3><p>${escapeHtml(d.results || "")}</p></section>
       <section class="modal-section"><h3>Screenshots</h3>${screenshotBlock}</section>
       <div class="modal-actions">
-        <a class="btn btn--brand" href="${escapeAttr(project.repoUrl)}" target="_blank" rel="noopener noreferrer">Open repository</a>
-        ${project.liveUrl ? `<a class="btn btn--alt" href="${escapeAttr(project.liveUrl)}" target="_blank" rel="noopener noreferrer">Live demo</a>` : ""}
-        <button type="button" class="btn btn--alt" data-close-modal>Close</button>
+        <a class="btn btn--primary" href="${escapeAttr(project.repoUrl)}" target="_blank" rel="noopener noreferrer">Open repository</a>
+        ${project.liveUrl ? `<a class="btn btn--secondary" href="${escapeAttr(project.liveUrl)}" target="_blank" rel="noopener noreferrer">Live demo</a>` : ""}
+        <button type="button" class="btn btn--secondary" data-close-modal>Close</button>
       </div>
     `;
   }

@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Keyshawn Jeannot — Computer Science student and Information Security Analyst Intern focused on security operations, vulnerability management, and security engineering.">
+  <meta name="description" content="Keyshawn Jeannot — Information Security Analyst intern focused on security operations, vulnerability management, and cloud infrastructure.">
   <meta name="author" content="Keyshawn Jeannot">
-  <meta name="theme-color" content="#1b1b1f">
+  <meta name="theme-color" content="#0F172A">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Keyshawn Jeannot | Cybersecurity Portfolio">
-  <meta property="og:description" content="Computer Science student and Information Security Analyst Intern. Security operations, vulnerability management, and aspiring security engineer.">
+  <meta property="og:title" content="Keyshawn Jeannot | Security Operations">
+  <meta property="og:description" content="Information Security Analyst intern. Security operations, vulnerability management across 300+ workstations, and cloud infrastructure in progress.">
   <meta property="og:image" content="assets/images/og-placeholder.svg">
   <meta name="twitter:card" content="summary_large_image">
-  <title>Keyshawn Jeannot | Cybersecurity Portfolio</title>
+  <title>Keyshawn Jeannot | Security Operations</title>
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="topbar">
-    <div class="topbar__inner">
+  <header class="site-header">
+    <div class="shell site-header__inner">
       <a class="brand" href="#top">Keyshawn Jeannot</a>
       <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -30,185 +27,193 @@
       <nav class="primary-nav" id="primary-nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#education">Certifications</a>
+        <a href="#projects">Projects</a>
         <a href="#leadership">Leadership</a>
-        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
-        <a class="nav-cta" href="assets/resume/Keyshawn_Jeannot_Resume.pdf" download>Résumé</a>
+        <a class="btn btn--primary btn--nav" href="assets/resume/Keyshawn_Jeannot_Resume.pdf" download>View résumé</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <!-- HOME HERO (tappunk-style) -->
-    <section class="home-hero" id="top" aria-labelledby="hero-name">
-      <div class="home-hero__copy">
-        <h1 id="hero-name" class="home-hero__name">Keyshawn Jeannot</h1>
-        <p class="home-hero__tagline">
-          Computer Science Student · Information Security Analyst Intern · NSBE President 
-        </p>
-        <div class="home-hero__actions">
-          <a class="btn btn--brand" href="#projects">View Projects</a>
-          <a class="btn btn--alt" href="https://github.com/The1keyy" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a class="btn btn--alt" href="https://www.linkedin.com/in/keyshawnjeannot/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a class="btn btn--alt" href="assets/resume/Keyshawn_Jeannot_Resume.pdf" download>Download Résumé</a>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="shell">
+        <div class="hero__panel">
+          <div class="hero__grid">
+            <div class="hero__copy">
+              <p class="hero__role">Information Security Analyst Intern</p>
+              <h1 id="hero-title">Keyshawn Jeannot</h1>
+              <p class="lede">Computer science student at UMass Boston, working in a university security operations center.</p>
+              <div class="hero__actions">
+                <a class="btn btn--primary" href="assets/resume/Keyshawn_Jeannot_Resume.pdf" download>View résumé</a>
+                <a class="btn btn--secondary" href="#projects">View projects</a>
+              </div>
+            </div>
+            <div class="hero__media">
+              <img
+                src="assets/images/pic.jpeg"
+                alt="Portrait of Keyshawn Jeannot"
+                width="640"
+                height="640"
+                id="profile-photo"
+              >
+            </div>
+          </div>
+          <ul class="hero__facts">
+            <li><strong>Security+</strong><span>CompTIA, earned</span></li>
+            <li><strong>300+</strong><span>Workstations in vulnerability scope</span></li>
+            <li><strong>NSBE President</strong><span>Chapter leadership, current</span></li>
+          </ul>
         </div>
       </div>
-      <div class="home-hero__media">
-        <img
-          src="assets/images/pic.jpeg"
-          alt="Placeholder for Keyshawn Jeannot’s professional profile photo"
-          width="420"
-          height="420"
-          id="profile-photo"
-        >
-        <p class="home-hero__media-note"></p>
-      </div>
     </section>
 
-    <!-- FEATURE CARDS -->
-    <section class="features" aria-label="Focus areas">
-      <article class="feature">
-        <h2 class="feature__title">Security Operations</h2>
-        <p class="feature__text">Investigating alerts, phishing reports, and endpoint findings in a university SOC with Sentinel and Defender.</p>
-      </article>
-      <article class="feature">
-        <h2 class="feature__title">Vulnerability Management</h2>
-        <p class="feature__text">Supporting Tenable scanning, patching-gap tracking, and remediation follow-up across 300+ campus workstations.</p>
-      </article>
-      <article class="feature">
-        <h2 class="feature__title">Leadership</h2>
-        <p class="feature__text">Leading an NSBE chapter through meetings, events, communication, and peer professional development.</p>
-      </article>
-    </section>
-
-    <div class="signature-strip">
-      <p class="signature-label">Keyshawn Jeannot</p>
-      <p class="signature-text">Security operations · Careful documentation · Public projects</p>
-      <p class="signature-links">
-        <a href="https://github.com/The1keyy" target="_blank" rel="noopener noreferrer">github.com/The1keyy</a>
-        <span aria-hidden="true">::</span>
-        <a href="https://www.linkedin.com/in/keyshawnjeannot/" target="_blank" rel="noopener noreferrer">linkedin.com/in/keyshawnjeannot</a>
-      </p>
-    </div>
-
-    <div class="content">
-      <section id="about" aria-labelledby="about-title">
+    <section class="section band" id="about" aria-labelledby="about-title">
+      <div class="shell">
         <h2 id="about-title">About</h2>
-        <p>
-          I am a Computer Science student at UMass Boston, NSBE President, and an Information Security Analyst Intern in a university Security Operations Center.
-          Day to day, that means reviewing security findings, looking into suspicious activity, documenting incidents, and helping track remediation across campus systems.
-        </p>
-        <p>
-          Outside the SOC, I lead NSBE programming that supports academic and professional growth for engineering and technology students.
-          I am especially interested in security engineering, cloud security, vulnerability management, detection and response, and—separately—the research questions around AI and LLM security as those systems become more widely used.
-        </p>
+        <div class="prose">
+          <p>
+            I am a computer science student at UMass Boston and an Information Security Analyst intern in a university security operations center.
+            Day to day, that means reviewing security findings, looking into suspicious activity, documenting incidents, and helping track remediation.
+          </p>
+          <p>
+            I am working toward the AWS Solutions Architect and Terraform certifications.
+            I am also interested in security engineering, and in AI and LLM security as those systems become more widely used.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        <h3 id="what-i-focus-on">What I focus on</h3>
-        <ul class="expect-list">
-          <li>Security Engineering</li>
-          <li>Cloud Security</li>
-          <li>Cybersecurity Research</li>
-          <li>AI &amp; LLM Security <span class="muted">(interest area)</span></li>
-          <li>Vulnerability Management</li>
-          <li>Security Operations</li>
-          <li>Detection &amp; Incident Response</li>
-        </ul>
-      </section>
-
-      <section id="experience" aria-labelledby="experience-title">
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="shell">
         <h2 id="experience-title">Experience</h2>
-        <h3>Information Security Analyst Intern</h3>
-        <p class="meta">University Security Operations Center · Current</p>
+        <article class="role-card">
+          <h3>Information Security Analyst Intern</h3>
+          <p class="role-card__org">University Security Operations Center · Current</p>
+          <ul class="plain-list">
+            <li>Supported vulnerability management across 300+ campus workstations by coordinating Tenable scans, identifying patching gaps, organizing affected assets, and tracking remediation.</li>
+            <li>Investigated security alerts, suspicious sign-ins, endpoint findings, and account activity using Microsoft Sentinel and Microsoft Defender.</li>
+            <li>Analyzed suspicious and reported phishing emails by reviewing sender information, URLs, attachments, message content, and email-security indicators.</li>
+            <li>Documented security incidents, investigation findings, remediation actions, and escalation details through service tickets and established SOC procedures.</li>
+            <li>Reviewed DHS cybersecurity findings and prepared weekly updates covering vulnerabilities, remediation progress, compliance concerns, and SOC activity.</li>
+            <li>Collaborated with IT and security teams to strengthen endpoint protection and reduce cybersecurity risk across the university.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-        <div class="callout">
-          <p class="callout__label">Scope highlight</p>
-          <p>Supported vulnerability management across <strong>300+ campus workstations</strong> by coordinating Tenable scans, identifying patching gaps, organizing affected assets, and tracking remediation.</p>
-        </div>
-
-        <ul>
-          <li>Investigated security alerts, suspicious sign-ins, endpoint findings, and account activity using Microsoft Sentinel and Microsoft Defender.</li>
-          <li>Analyzed suspicious and reported phishing emails by reviewing sender information, URLs, attachments, message content, and email-security indicators.</li>
-          <li>Documented security incidents, investigation findings, remediation actions, and escalation details through service tickets and established SOC procedures.</li>
-          <li>Reviewed DHS cybersecurity findings and prepared weekly updates covering vulnerabilities, remediation progress, compliance concerns, and SOC activity.</li>
-          <li>Collaborated with IT and security teams to strengthen endpoint protection and reduce cybersecurity risk across the university.</li>
-        </ul>
-      </section>
-
-      <section id="projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">Projects</h2>
-        <p>Descriptions come from public repository READMEs and source code. Internal SOC data is never published here.</p>
-        <div class="project-grid" id="project-grid" aria-live="polite"></div>
-      </section>
-
-      <section id="skills" aria-labelledby="skills-title">
+    <section class="section band" id="skills" aria-labelledby="skills-title">
+      <div class="shell">
         <h2 id="skills-title">Skills</h2>
-        <div class="skills-grid">
-          <div>
-            <h3>Security Operations</h3>
-            <p class="tag-row"><span>Security Alert Investigation</span><span>Phishing Analysis</span><span>Incident Documentation</span><span>Vulnerability Management</span></p>
-          </div>
-          <div>
-            <h3>Security Tools</h3>
-            <p class="tag-row"><span>Microsoft Sentinel</span><span>Microsoft Defender</span><span>Tenable</span></p>
-          </div>
-          <div>
-            <h3>Programming and Web Development</h3>
-            <p class="tag-row"><span>Python</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git &amp; GitHub</span></p>
-          </div>
-          <div>
-            <h3>Systems and Platforms</h3>
-            <p class="tag-row"><span>Linux</span><span>Windows</span></p>
-          </div>
-          <div>
-            <h3>Research and Professional Skills</h3>
-            <p class="tag-row"><span>Cybersecurity Research</span><span>Technical Writing</span></p>
-          </div>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>Security operations</h3>
+            <ul class="tags">
+              <li>Security alert investigation</li>
+              <li>Phishing analysis</li>
+              <li>Incident documentation</li>
+              <li>Vulnerability management</li>
+              <li>Technical writing</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Security tools</h3>
+            <ul class="tags">
+              <li>Microsoft Sentinel</li>
+              <li>Microsoft Defender</li>
+              <li>Tenable</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Cloud and platforms</h3>
+            <ul class="tags">
+              <li>AWS</li>
+              <li>Docker</li>
+              <li>Linux</li>
+              <li>Windows</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Programming</h3>
+            <ul class="tags">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Git</li>
+            </ul>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="leadership" aria-labelledby="leadership-title">
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="shell">
+        <h2 id="education-title">Certifications</h2>
+        <p class="edu-line">University of Massachusetts Boston · Computer Science · Senior</p>
+        <div class="cert-grid">
+          <article class="cert">
+            <p class="status status--earned">Earned</p>
+            <h3>CompTIA Security+</h3>
+            <p>CompTIA</p>
+          </article>
+          <article class="cert">
+            <p class="status status--expected">Expected October 2026</p>
+            <h3>AWS Solutions Architect – Associate</h3>
+            <p>Amazon Web Services</p>
+          </article>
+          <article class="cert">
+            <p class="status status--progress">In progress</p>
+            <h3>HashiCorp Terraform Associate</h3>
+            <p>HashiCorp</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band" id="projects" aria-labelledby="projects-title">
+      <div class="shell">
+        <h2 id="projects-title">Projects</h2>
+        <p class="section-intro">Public repositories only. Internal SOC data is not published here.</p>
+        <div class="project-grid" id="project-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" id="leadership" aria-labelledby="leadership-title">
+      <div class="shell">
         <h2 id="leadership-title">Leadership</h2>
-        <h3>NSBE President</h3>
-        <p>
-          As President of the National Society of Black Engineers chapter, I support the academic and professional development of engineering and technology students.
-          The role builds communication, organization, collaboration, and public speaking—skills that transfer into security team coordination and stakeholder updates.
-        </p>
-        <ul>
-          <li>Coordinate meetings, initiatives, communication, and student engagement.</li>
-          <li>Plan events and keep chapter work moving across a volunteer team.</li>
-          <li>Build leadership and facilitation experience while supporting peers’ growth.</li>
-        </ul>
-      </section>
+        <article class="role-card">
+          <h3>NSBE President</h3>
+          <p class="role-card__org">National Society of Black Engineers · Current</p>
+          <p class="role-card__summary">
+            I support the academic and professional development of engineering and technology students through meetings, events, and chapter communication.
+          </p>
+          <ul class="plain-list">
+            <li>Coordinate meetings, initiatives, communication, and student engagement.</li>
+            <li>Plan events and keep chapter work moving across a volunteer team.</li>
+            <li>Build leadership and facilitation experience while supporting peers’ growth.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-      <section id="education" aria-labelledby="education-title">
-        <h2 id="education-title">Education &amp; Certification</h2>
-        <h3>University of Massachusetts Boston</h3>
-        <p class="meta">Computer Science · Senior student</p>
-        <h3>CompTIA Security+</h3>
-        <p class="meta"><span class="badge badge--earned">Earned</span></p>
-        <h3>AWS Certified Solutions Architect – Associate</h3>
-        <p class="meta"><span class="badge">Expected October 2026</span></p>
-        <h3>HashiCorp Certified: Terraform Associate</h3>
-        <p class="meta"><span class="badge">In Progress</span></p>
-      </section>
-
-      <section id="contact" aria-labelledby="contact-title">
+    <section class="section band" id="contact" aria-labelledby="contact-title">
+      <div class="shell">
         <h2 id="contact-title">Contact</h2>
-        <p>Open to internships, entry-level security roles, and conversations about security engineering, cloud security, and SOC work.</p>
+        <p class="section-intro">Résumé, GitHub, and LinkedIn.</p>
         <ul class="contact-list">
-          <li><strong>Email:</strong> <a href="mailto:Keyshawnjeannot2@gmail.com">keyshawnjeannot2@gmail.com</a></li>
-          <li><strong>GitHub:</strong> <a href="https://github.com/The1keyy" target="_blank" rel="noopener noreferrer">github.com/The1keyy</a></li>
-          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/keyshawnjeannot/" target="_blank" rel="noopener noreferrer">linkedin.com/in/keyshawnjeannot</a></li>
+          <li><a href="mailto:Keyshawnjeannot2@gmail.com">keyshawnjeannot2@gmail.com</a></li>
+          <li><a href="https://github.com/The1keyy" target="_blank" rel="noopener noreferrer">github.com/The1keyy</a></li>
+          <li><a href="https://www.linkedin.com/in/keyshawnjeannot/" target="_blank" rel="noopener noreferrer">linkedin.com/in/keyshawnjeannot</a></li>
         </ul>
-        <p class="muted"> <code></code><code></code> </p>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
+    <div class="shell site-footer__inner">
       <p>© <span id="year"></span> Keyshawn Jeannot</p>
       <p class="site-footer__links">
         <a href="https://github.com/The1keyy" target="_blank" rel="noopener noreferrer">GitHub</a>
