@@ -105,21 +105,34 @@
       card.className = "project-card";
       card.id = `project-${project.id}`;
 
+      const shotClass = project.screenshotPosition === "top"
+        ? "project-card__shot project-card__shot--top"
+        : "project-card__shot";
       const media = project.screenshot
-        ? `<img class="project-card__shot" src="${escapeAttr(project.screenshot)}" alt="Screenshot of ${escapeAttr(project.title)}" loading="lazy" decoding="async">`
+        ? `<img class="${shotClass}" src="${escapeAttr(project.screenshot)}" alt="${escapeAttr(project.screenshotAlt || `Screenshot of ${project.title}`)}" loading="lazy" decoding="async">`
+        : "";
+
+      const highlights = Array.isArray(project.highlights) && project.highlights.length
+        ? `<div>
+            <p class="project-card__label">Key results</p>
+            <ul class="highlights">
+              ${project.highlights.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+            </ul>
+          </div>`
         : "";
 
       card.innerHTML = `
         ${media}
-        <div class="project-card__header">
-          <p class="project-card__category">${escapeHtml(project.category)}</p>
-          <h3>${escapeHtml(project.title)}</h3>
-        </div>
         <div class="project-card__body">
+          <div class="project-card__header">
+            <h3>${escapeHtml(project.title)}</h3>
+            <p class="project-card__category">${escapeHtml(project.category)}</p>
+          </div>
           <p>${escapeHtml(project.summary)}</p>
-          <ul class="tags" aria-label="Tools">
+          ${highlights}
+          <ul class="tags" aria-label="Technologies">
             ${project.tools
-              .slice(0, 5)
+              .slice(0, 6)
               .map((tool) => `<li>${escapeHtml(tool)}</li>`)
               .join("")}
           </ul>
@@ -128,33 +141,37 @@
       `;
 
       const actions = card.querySelector(".project-card__actions");
+      const websiteUrl = project.websiteUrl || project.liveUrl;
+
+      if (websiteUrl) {
+        const website = document.createElement("a");
+        website.className = "btn btn--primary";
+        website.href = websiteUrl;
+        website.target = "_blank";
+        website.rel = "noopener noreferrer";
+        website.textContent = "Website";
+        website.setAttribute("aria-label", `${project.title} website`);
+        actions.appendChild(website);
+      }
 
       const repo = document.createElement("a");
-      repo.className = "btn btn--small btn--secondary";
+      repo.className = "btn btn--secondary";
       repo.href = project.repoUrl;
       repo.target = "_blank";
       repo.rel = "noopener noreferrer";
-      repo.textContent = "GitHub";
+      repo.textContent = "Repository";
+      repo.setAttribute("aria-label", `${project.title} repository`);
       actions.appendChild(repo);
 
       if (project.details) {
         const details = document.createElement("button");
         details.type = "button";
-        details.className = "btn btn--small btn--primary";
+        details.className = "btn btn--quiet";
         details.textContent = "Details";
         details.setAttribute("data-project-id", project.id);
         details.setAttribute("aria-haspopup", "dialog");
+        details.setAttribute("aria-label", `${project.title} details`);
         actions.appendChild(details);
-      }
-
-      if (project.liveUrl) {
-        const live = document.createElement("a");
-        live.className = "btn btn--small btn--secondary";
-        live.href = project.liveUrl;
-        live.target = "_blank";
-        live.rel = "noopener noreferrer";
-        live.textContent = "Live demo";
-        actions.appendChild(live);
       }
 
       fragment.appendChild(card);
@@ -207,26 +224,25 @@
     const d = project.details || {};
     const list = (items = []) =>
       `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+    const websiteUrl = project.websiteUrl || project.liveUrl;
 
     const screenshotBlock = project.screenshot
-      ? `<div class="modal-shot"><img src="${escapeAttr(project.screenshot)}" alt="Screenshot of ${escapeAttr(project.title)}" loading="lazy" decoding="async"></div>`
-      : `<div class="modal-shot"><div class="modal-shot__placeholder">No public screenshot yet. Add a sanitized image path in data/projects.json.</div></div>`;
+      ? `<div class="modal-shot"><img src="${escapeAttr(project.screenshot)}" alt="${escapeAttr(project.screenshotAlt || `Screenshot of ${project.title}`)}" loading="lazy" decoding="async"></div>`
+      : "";
 
     return `
       <p class="modal__category">${escapeHtml(project.category)}</p>
       <h2 id="modal-title">${escapeHtml(project.title)}</h2>
       <section class="modal-section"><h3>Overview</h3><p>${escapeHtml(d.overview || project.summary)}</p></section>
-      <section class="modal-section"><h3>Business problem</h3><p>${escapeHtml(d.businessProblem || project.objective)}</p></section>
-      <section class="modal-section"><h3>Environment</h3><p>${escapeHtml(d.environment || "See repository documentation.")}</p></section>
-      <section class="modal-section"><h3>Responsibilities</h3>${list(d.responsibilities || project.workedOn)}</section>
-      <section class="modal-section"><h3>Process</h3>${list(d.process || [])}</section>
-      <section class="modal-section"><h3>Tools used</h3>${list(project.tools)}</section>
-      <section class="modal-section"><h3>Results / lessons learned</h3><p>${escapeHtml(d.results || "")}</p></section>
-      <section class="modal-section"><h3>Screenshots</h3>${screenshotBlock}</section>
+      ${d.focus ? `<section class="modal-section"><h3>Focus</h3><p>${escapeHtml(d.focus)}</p></section>` : ""}
+      <section class="modal-section"><h3>What it covers</h3>${list(d.covered || project.highlights || [])}</section>
+      <section class="modal-section"><h3>Technologies</h3>${list(project.tools)}</section>
+      <section class="modal-section"><h3>Results</h3><p>${escapeHtml(d.results || "")}</p></section>
+      ${screenshotBlock ? `<section class="modal-section"><h3>Screenshot</h3>${screenshotBlock}</section>` : ""}
       <div class="modal-actions">
-        <a class="btn btn--primary" href="${escapeAttr(project.repoUrl)}" target="_blank" rel="noopener noreferrer">Open repository</a>
-        ${project.liveUrl ? `<a class="btn btn--secondary" href="${escapeAttr(project.liveUrl)}" target="_blank" rel="noopener noreferrer">Live demo</a>` : ""}
-        <button type="button" class="btn btn--secondary" data-close-modal>Close</button>
+        ${websiteUrl ? `<a class="btn btn--primary" href="${escapeAttr(websiteUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(project.title)} website">Website</a>` : ""}
+        <a class="btn btn--secondary" href="${escapeAttr(project.repoUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(project.title)} repository">Repository</a>
+        <button type="button" class="btn btn--quiet" data-close-modal>Close</button>
       </div>
     `;
   }

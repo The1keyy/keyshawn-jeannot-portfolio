@@ -253,6 +253,16 @@ h3 {
   font-size: 14px;
 }
 
+.btn--quiet {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text-2);
+}
+.btn--quiet:hover {
+  border-color: #475569;
+  color: #fff;
+}
+
 /* Hero */
 .hero { padding: 32px 0 8px; }
 
@@ -275,9 +285,9 @@ h3 {
 .hero__media { min-width: 0; }
 
 .hero__role {
-  margin: 0 0 10px;
+  margin: 12px 0 0;
   color: var(--accent-text);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -286,6 +296,19 @@ h3 {
   flex-wrap: wrap;
   gap: 12px;
 }
+
+.hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 16px 0 0;
+}
+.hero__links a {
+  color: var(--text-2);
+  font-weight: 600;
+  text-decoration: none;
+}
+.hero__links a:hover { color: #fff; }
 
 .hero__media img {
   width: min(100%, 260px);
@@ -417,6 +440,25 @@ h3 {
   line-height: 1.4;
 }
 
+.skill-core {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+.skill-core li {
+  padding: 8px 12px;
+  border: 1px solid rgba(59, 130, 246, 0.45);
+  border-radius: 6px;
+  background: rgba(59, 130, 246, 0.16);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 /* Experience and leadership */
 .role-card {
   padding: 32px;
@@ -488,8 +530,13 @@ h3 {
 /* Projects */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
+  margin-top: 8px;
+}
+
+@media (min-width: 901px) {
+  .project-grid { grid-template-columns: 1fr 1fr; }
 }
 
 .project-card {
@@ -503,26 +550,28 @@ h3 {
 .project-card:hover { border-color: #475569; }
 
 .project-card__header {
-  padding: 24px 24px 0;
   background: transparent;
 }
 .project-card__category {
-  margin: 0 0 8px;
-  color: var(--text-3);
+  margin: 8px 0 0;
+  color: var(--accent-text);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .project-card__header h3 {
   margin: 0;
   color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
 }
 .project-card__shot {
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  object-position: center;
   width: 100%;
+  background: #0b1220;
 }
+.project-card__shot--top { object-position: top center; }
 .project-card__body {
   display: flex;
   flex-direction: column;
@@ -530,17 +579,40 @@ h3 {
   flex: 1;
   padding: 24px;
 }
-.project-card__body p {
+.project-card__body > p {
   margin: 0;
   color: var(--text-2);
   font-size: 14px;
   line-height: 1.6;
 }
+.project-card .tags { margin-top: 0; }
+.project-card__label {
+  margin: 0 0 8px;
+  color: var(--text-3);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.highlights {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.highlights li {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+}
+.highlights li + li { margin-top: 4px; }
 .project-card__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: auto;
+}
+.project-card__actions .btn {
+  min-height: 44px;
+  padding: 12px 18px;
 }
 
 /* Contact and footer */
@@ -708,6 +780,11 @@ body.modal-open { overflow: hidden; }
   h1 { max-width: none; }
   .role-card { padding: 24px; }
   .section { padding: 40px 0; }
+  .project-card__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .project-card__actions .btn { width: 100%; }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {

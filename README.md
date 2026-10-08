@@ -25,14 +25,14 @@ A local server is required so `data/projects.json` can load via `fetch`.
 
 | Section | Purpose |
 |---------|---------|
-| Hero | Name, headline, intro, CTAs, photo placeholder |
-| About | Concise biography and career interests |
-| Experience | SOC internship with 300+ workstation highlight |
-| Projects | Cards + detail modal from JSON |
-| Skills | Grouped tags (no percentage bars) |
+| Hero | Name, security-engineering positioning, résumé and project actions |
+| Featured Security Projects | Security Automation Pipeline and Kubernetes RBAC Security Lab |
+| Experience | Security operations internship |
+| Skills | Core technologies, then grouped skills |
+| Certifications | Security+ earned; AWS and Terraform in progress |
+| Education | UMass Boston, B.A. Computer Science, expected May 2027 |
 | Leadership | NSBE President |
-| Education | UMass Boston, CompTIA Security+ (earned), AWS Solutions Architect – Associate (expected October 2026), Terraform Associate (in progress) |
-| Contact | Email placeholder, GitHub, LinkedIn |
+| Contact | Email, GitHub, LinkedIn |
 
 ## What you still need to provide
 
@@ -46,9 +46,8 @@ A local server is required so `data/projects.json` can load via `fetch`.
 
 Edit `data/projects.json` only. Each project supports:
 
-- card fields: title, summary, objective, workedOn, tools, skills, repoUrl
-- optional: liveUrl, screenshot
-- modal detail block: overview, businessProblem, environment, responsibilities, process, results
+- card fields: title, category, summary, highlights, tools, websiteUrl, repoUrl, screenshot
+- modal detail block: overview, focus, covered, results
 
 Do not publish real university usernames, emails, IPs, hostnames, tickets, credentials, or confidential SOC data.
 
